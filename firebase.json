@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "web3connect",
+    "public": "dist-docs",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

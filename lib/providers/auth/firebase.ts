@@ -1,4 +1,6 @@
 import {
+	GoogleAuthProvider,
+	signInWithPopup,
 	signInAnonymously,
 	signOut as signOutFormFirebase,
 	Auth,
@@ -8,11 +10,11 @@ import {
 } from 'firebase/auth';
 import { IAuthProvider } from '../../interfaces/auth-provider.interface';
 
-
 let auth!: Auth;
 
 const signinWithGoogle = async (): Promise<UserCredential> => {
-	throw new Error('Not implemented');
+	const provider = new GoogleAuthProvider();
+	return await signInWithPopup(auth, provider);
 };
 
 const signInAsAnonymous = async () => {

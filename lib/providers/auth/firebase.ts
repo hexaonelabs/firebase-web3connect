@@ -12,7 +12,7 @@ import { IAuthProvider } from '../../interfaces/auth-provider.interface';
 
 let auth!: Auth;
 
-const signinWithGoogle = async (): Promise<UserCredential> => {
+const signInWithGoogle = async (): Promise<UserCredential> => {
 	const provider = new GoogleAuthProvider();
 	return await signInWithPopup(auth, provider);
 };
@@ -41,7 +41,7 @@ const getCurrentUserAuth = async () => {
  * Only use this provider from the authServices!
  */
 const FirebaseAuthProvider: IAuthProvider = {
-	signinWithGoogle,
+	signInWithGoogle,
 	signInAsAnonymous,
 	signOut,
 	getOnAuthStateChanged,

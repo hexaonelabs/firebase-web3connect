@@ -11,7 +11,7 @@ export const initialize = async (auth: Auth) => {
 
 export const authWithGoogle = async () => {
 	// use authProvider to sign in with Google
-	const user = await authProvider.signinWithGoogle();
+	const user = await authProvider.signInWithGoogle();
 	return user;
 };
 
